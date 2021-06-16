@@ -1,0 +1,29 @@
+{
+  "name": "P3",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GenKoKo/P3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GenKoKo/P3/issues"
+  },
+  "homepage": "https://github.com/GenKoKo/P3#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
