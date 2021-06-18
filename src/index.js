@@ -1,18 +1,16 @@
-// import lib from "./lib.js";
-
-// let result = lib.add(3,4);
-// console.log("🚀 ~ file: index.js ~ line 4 ~ result", result)
-
-// result = lib.multiply(3,4);
-// console.log("🚀 ~ file: index.js ~ line 7 ~ result", result)
-
-
 import "./style.scss";
 import title from "./title.js";
 import list from "./list.js";
+import React from "react";
+import ReactDom from "react-dom";
 
-document.body.append(title)
-document.body.append(list)
+let app = <div>test123 ttt</div>
+ReactDom.render(app, document.getElementById("root"));
+
+
+
+// document.body.append(title)
+// document.body.append(list)
 
 
 
