@@ -17,20 +17,22 @@ class HomePage extends React.Component{
 }
 
 
-// class ListPage extends React.Component{
+class ListPage extends React.Component{
 
-//     render(){
+    render(){
+        return ( <div>
+            <AddForm/>
+            <List/>
+        </div> )
+    }
 
-        
-//         return 
-//     }
-
-// }
+}
 
 
-let ListPage = ( <div>
-                    { <AddForm/>}
-                </div>)
+// let ListPage = ( <div>
+//                     <AddForm/>
+//                     <List/>
+//                 </div>)
 
 class AddForm extends React.Component{
 
@@ -40,34 +42,46 @@ class AddForm extends React.Component{
     }
     
     render(){
-        return <input type="submit" value={this.state.todo} />
+        return <div>
+                    <form>
+                        <input type="text" />
+                        <input type="submit" value={this.state.todo} />
+
+                    </form>
+                </div>
+        
     }
 }
 
 class List extends React.Component{
 
     render(){
-
+        return  <div>
+                    <div>test</div>
+                </div>
     }
 
 }
 
 
-// class app extends React.Component{
+class App extends React.Component{
     
+    render(){
+        return ( 
+            <div>
+                <HomePage/>
+                <ListPage/> 
+            </div>
+        )
+
+    }
 
 
-//     render(){
-//         return React.createElement(<HomePage/>, null )
-
-//     }
+}
 
 
-// }
-
-
-let app = <HomePage/>
-ReactDom.render(app, document.getElementById("root"));
+// let App = <ListPage/>
+ReactDom.render(<App/>, document.getElementById("root"));
 
 
 
