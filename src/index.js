@@ -29,10 +29,6 @@ class ListPage extends React.Component{
 }
 
 
-// let ListPage = ( <div>
-//                     <AddForm/>
-//                     <List/>
-//                 </div>)
 
 class AddForm extends React.Component{
 
@@ -43,11 +39,13 @@ class AddForm extends React.Component{
     
     render(){
         return <div>
-                    <form>
-                        <input type="text" />
-                        <input type="submit" value={this.state.todo} />
-
+                    <form className = "container">
+                        <div className="addform_container">
+                            <input type="text" className="addform_input" placeholder="測試紀錄"/>
+                            <input type="submit" className="addform_submit" value="新增記錄" />
+                        </div>
                     </form>
+                    <hr/>
                 </div>
         
     }
@@ -56,8 +54,24 @@ class AddForm extends React.Component{
 class List extends React.Component{
 
     render(){
-        return  <div>
-                    <div>test</div>
+        return  <div className = "container">
+                    <div className="list_container">
+                        <div className="list_item">
+                            <div className="list_word">test</div>
+                            <input type="submit" className="list_delete" value="刪除"/>
+                        </div>
+                        <div className="list_item">
+                            <div className="list_word">lorem10000</div>
+                            <input type="submit" className="list_delete" value="刪除"/>
+                        </div>
+                        <div className="list_item">
+                            <div className="list_word">test</div>
+                            <input type="submit" className="list_delete" value="刪除"/>
+                        </div>
+                
+                    </div>
+                    <input type="submit" className="list_back" value="返回首頁"/>
+
                 </div>
     }
 
@@ -69,7 +83,7 @@ class App extends React.Component{
     render(){
         return ( 
             <div>
-                <HomePage/>
+                {/* <HomePage/> */}
                 <ListPage/> 
             </div>
         )
