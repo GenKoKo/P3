@@ -3,6 +3,9 @@ import title from "./title.js";
 import list from "./list.js";
 import React from "react";
 import ReactDom from "react-dom";
+import App from './App.js';
+
+
 
 
 class HomePage extends React.Component{
@@ -57,11 +60,11 @@ class List extends React.Component{
         return  <div className = "container">
                     <div className="list_container">
                         <div className="list_item">
-                            <div className="list_word">test</div>
+                            <div className="list_word">刪除刪除刪除刪除</div>
                             <input type="submit" className="list_delete" value="刪除"/>
                         </div>
                         <div className="list_item">
-                            <div className="list_word">lorem10000</div>
+                            <div className="list_word">刪除刪除刪除刪除</div>
                             <input type="submit" className="list_delete" value="刪除"/>
                         </div>
                         <div className="list_item">
@@ -78,20 +81,18 @@ class List extends React.Component{
 }
 
 
-class App extends React.Component{
+// class App extends React.Component{
     
-    render(){
-        return ( 
-            <div>
-                {/* <HomePage/> */}
-                <ListPage/> 
-            </div>
-        )
+//     render(){
+//         return ( 
+//             <div>
+//                 {/* <HomePage/> */}
+//                 <ListPage/> 
+//             </div>
+//         )
 
-    }
-
-
-}
+//     }
+// }
 
 
 // let App = <ListPage/>
