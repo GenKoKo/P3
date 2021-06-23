@@ -1,84 +1,99 @@
 import "./style.scss";
-import title from "./title.js";
-import list from "./list.js";
 import React from "react";
 import ReactDom from "react-dom";
 import App from './App.js';
+import LandingPage from './LandingPage';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 
-
-
-class HomePage extends React.Component{
+class WholeWeb extends React.Component{
     render(){
-        return  <div className="container">
-                    <div className="homepage_title">React 練習專案</div>
-                    <div className="homepag_main">歡迎光臨我的頁面</div>
-                    <input type="submit" value="點此開始" className="homepage_button"/>
-                    {/*  onClick={this.pageChanger.bind(this)} */}
-                </div>
+        return (
+            <Router >
+                <Switch>
+                    <Route path='/' exact component={LandingPage} />
+                    <Route path='/list' component={App} />
+                </Switch>
+            </Router>
+        )
     }
 }
 
 
-class ListPage extends React.Component{
-
-    render(){
-        return ( <div>
-            <AddForm/>
-            <List/>
-        </div> )
-    }
-
-}
+ReactDom.render(<WholeWeb/>, document.getElementById("root"));
 
 
+// class HomePage extends React.Component{
+//     render(){
+//         return  <div className="container">
+//                     <div className="homepage_title">React 練習專案</div>
+//                     <div className="homepag_main">歡迎光臨我的頁面</div>
+//                     <input type="submit" value="點此開始" className="homepage_button"/>
+//                     {/*  onClick={this.pageChanger.bind(this)} */}
+//                 </div>
+//     }
+// }
 
-class AddForm extends React.Component{
 
-    constructor(props){
-        super(props);
-        this.state = {name: ""}
-    }
+// class ListPage extends React.Component{
+
+//     render(){
+//         return ( <div>
+//             <AddForm/>
+//             <List/>
+//         </div> )
+//     }
+
+// }
+
+
+
+// class AddForm extends React.Component{
+
+//     constructor(props){
+//         super(props);
+//         this.state = {name: ""}
+//     }
     
-    render(){
-        return <div>
-                    <form className = "container">
-                        <div className="addform_container">
-                            <input type="text" className="addform_input" placeholder="測試紀錄"/>
-                            <input type="submit" className="addform_submit" value="新增記錄" />
-                        </div>
-                    </form>
-                    <hr/>
-                </div>
+//     render(){
+//         return <div>
+//                     <form className = "container">
+//                         <div className="addform_container">
+//                             <input type="text" className="addform_input" placeholder="測試紀錄"/>
+//                             <input type="submit" className="addform_submit" value="新增記錄" />
+//                         </div>
+//                     </form>
+//                     <hr/>
+//                 </div>
         
-    }
-}
+//     }
+// }
 
-class List extends React.Component{
+// class List extends React.Component{
 
-    render(){
-        return  <div className = "container">
-                    <div className="list_container">
-                        <div className="list_item">
-                            <div className="list_word">刪除刪除刪除刪除</div>
-                            <input type="submit" className="list_delete" value="刪除"/>
-                        </div>
-                        <div className="list_item">
-                            <div className="list_word">刪除刪除刪除刪除</div>
-                            <input type="submit" className="list_delete" value="刪除"/>
-                        </div>
-                        <div className="list_item">
-                            <div className="list_word">test</div>
-                            <input type="submit" className="list_delete" value="刪除"/>
-                        </div>
+//     render(){
+//         return  <div className = "container">
+//                     <div className="list_container">
+//                         <div className="list_item">
+//                             <div className="list_word">刪除刪除刪除刪除</div>
+//                             <input type="submit" className="list_delete" value="刪除"/>
+//                         </div>
+//                         <div className="list_item">
+//                             <div className="list_word">刪除刪除刪除刪除</div>
+//                             <input type="submit" className="list_delete" value="刪除"/>
+//                         </div>
+//                         <div className="list_item">
+//                             <div className="list_word">test</div>
+//                             <input type="submit" className="list_delete" value="刪除"/>
+//                         </div>
                 
-                    </div>
-                    <input type="submit" className="list_back" value="返回首頁"/>
+//                     </div>
+//                     <input type="submit" className="list_back" value="返回首頁"/>
 
-                </div>
-    }
+//                 </div>
+//     }
 
-}
+// }
 
 
 // class App extends React.Component{
@@ -96,7 +111,9 @@ class List extends React.Component{
 
 
 // let App = <ListPage/>
-ReactDom.render(<App/>, document.getElementById("root"));
+
+
+
 
 
 
