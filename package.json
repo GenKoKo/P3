@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "test",
   "main": "index.js",
+  "private": true,
   "homepage":"https://genkoko.github.io/P3",
 
   "scripts": {
