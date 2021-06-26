@@ -9,7 +9,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 class WholeWeb extends React.Component{
     render(){
         return (
-            <Router >
+            <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route path='/' exact component={LandingPage} />
                     <Route path='/list' component={App} />

@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "test",
   "main": "index.js",
-  "private": true,
-  "homepage": "https://genkoko.github.io/P3",
+  "homepage": "https://genkoko.github.io/",
   "scripts": {
     "build": "webpack",
     "start": "webpack server --history-api-fallback",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "repository": {
     "type": "git",
